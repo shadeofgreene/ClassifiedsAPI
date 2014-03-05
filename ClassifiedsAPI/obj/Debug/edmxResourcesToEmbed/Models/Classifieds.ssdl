@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClassifiedsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ClassifiedsModelStoreContainer">
+    <EntitySet Name="Category" EntityType="ClassifiedsModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FlaggedItem" EntityType="ClassifiedsModel.Store.FlaggedItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FlagType" EntityType="ClassifiedsModel.Store.FlagType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item" EntityType="ClassifiedsModel.Store.Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item_Category" EntityType="ClassifiedsModel.Store.Item_Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item_Keyword" EntityType="ClassifiedsModel.Store.Item_Keyword" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item_Tag" EntityType="ClassifiedsModel.Store.Item_Tag" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemForSale" EntityType="ClassifiedsModel.Store.ItemForSale" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemImage" EntityType="ClassifiedsModel.Store.ItemImage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KeyWord" EntityType="ClassifiedsModel.Store.KeyWord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListingType" EntityType="ClassifiedsModel.Store.ListingType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PointAward" EntityType="ClassifiedsModel.Store.PointAward" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityQuestions" EntityType="ClassifiedsModel.Store.SecurityQuestions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tag" EntityType="ClassifiedsModel.Store.Tag" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="ClassifiedsModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User_PointsAwarded" EntityType="ClassifiedsModel.Store.User_PointsAwarded" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserType" EntityType="ClassifiedsModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WatchCategory" EntityType="ClassifiedsModel.Store.WatchCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WatchItem" EntityType="ClassifiedsModel.Store.WatchItem" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Category_Item_Category_FK1" Association="ClassifiedsModel.Store.Category_Item_Category_FK1">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Item_Category" EntitySet="Item_Category" />
+    </AssociationSet>
+    <AssociationSet Name="Category_WatchCategory_FK1" Association="ClassifiedsModel.Store.Category_WatchCategory_FK1">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="WatchCategory" EntitySet="WatchCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FlagType_FlaggedItem_FK1" Association="ClassifiedsModel.Store.FlagType_FlaggedItem_FK1">
+      <End Role="FlagType" EntitySet="FlagType" />
+      <End Role="FlaggedItem" EntitySet="FlaggedItem" />
+    </AssociationSet>
+    <AssociationSet Name="Item_FlaggedItem_FK1" Association="ClassifiedsModel.Store.Item_FlaggedItem_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="FlaggedItem" EntitySet="FlaggedItem" />
+    </AssociationSet>
+    <AssociationSet Name="Item_Item_Category_FK1" Association="ClassifiedsModel.Store.Item_Item_Category_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Item_Category" EntitySet="Item_Category" />
+    </AssociationSet>
+    <AssociationSet Name="Item_Item_Keyword_FK1" Association="ClassifiedsModel.Store.Item_Item_Keyword_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Item_Keyword" EntitySet="Item_Keyword" />
+    </AssociationSet>
+    <AssociationSet Name="Item_Item_Tag_FK1" Association="ClassifiedsModel.Store.Item_Item_Tag_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Item_Tag" EntitySet="Item_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="Item_ItemForSale_FK1" Association="ClassifiedsModel.Store.Item_ItemForSale_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="ItemForSale" EntitySet="ItemForSale" />
+    </AssociationSet>
+    <AssociationSet Name="Item_ItemImage_FK1" Association="ClassifiedsModel.Store.Item_ItemImage_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="ItemImage" EntitySet="ItemImage" />
+    </AssociationSet>
+    <AssociationSet Name="Item_WatchItem_FK1" Association="ClassifiedsModel.Store.Item_WatchItem_FK1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="WatchItem" EntitySet="WatchItem" />
+    </AssociationSet>
+    <AssociationSet Name="KeyWord_Item_Keyword_FK1" Association="ClassifiedsModel.Store.KeyWord_Item_Keyword_FK1">
+      <End Role="KeyWord" EntitySet="KeyWord" />
+      <End Role="Item_Keyword" EntitySet="Item_Keyword" />
+    </AssociationSet>
+    <AssociationSet Name="ListingType_Item_FK1" Association="ClassifiedsModel.Store.ListingType_Item_FK1">
+      <End Role="ListingType" EntitySet="ListingType" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="PointAward_User_PointsAwarded_FK1" Association="ClassifiedsModel.Store.PointAward_User_PointsAwarded_FK1">
+      <End Role="PointAward" EntitySet="PointAward" />
+      <End Role="User_PointsAwarded" EntitySet="User_PointsAwarded" />
+    </AssociationSet>
+    <AssociationSet Name="Tag_Item_Tag_FK1" Association="ClassifiedsModel.Store.Tag_Item_Tag_FK1">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="Item_Tag" EntitySet="Item_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="User_FlaggedItem_FK1" Association="ClassifiedsModel.Store.User_FlaggedItem_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="FlaggedItem" EntitySet="FlaggedItem" />
+    </AssociationSet>
+    <AssociationSet Name="User_ItemForSale_FK1" Association="ClassifiedsModel.Store.User_ItemForSale_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="ItemForSale" EntitySet="ItemForSale" />
+    </AssociationSet>
+    <AssociationSet Name="User_SecurityQuestions_FK1" Association="ClassifiedsModel.Store.User_SecurityQuestions_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="SecurityQuestions" EntitySet="SecurityQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="User_Tag_FK1" Association="ClassifiedsModel.Store.User_Tag_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Tag" EntitySet="Tag" />
+    </AssociationSet>
+    <AssociationSet Name="User_User_PointsAwarded_FK1" Association="ClassifiedsModel.Store.User_User_PointsAwarded_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="User_PointsAwarded" EntitySet="User_PointsAwarded" />
+    </AssociationSet>
+    <AssociationSet Name="User_WatchCategory_FK1" Association="ClassifiedsModel.Store.User_WatchCategory_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="WatchCategory" EntitySet="WatchCategory" />
+    </AssociationSet>
+    <AssociationSet Name="User_WatchItem_FK1" Association="ClassifiedsModel.Store.User_WatchItem_FK1">
+      <End Role="User" EntitySet="User" />
+      <End Role="WatchItem" EntitySet="WatchItem" />
+    </AssociationSet>
+    <AssociationSet Name="UserType_User_FK1" Association="ClassifiedsModel.Store.UserType_User_FK1">
+      <End Role="UserType" EntitySet="UserType" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="int" Nullable="false" />
+    <Property Name="categoryName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="parentCategory" Type="int" Nullable="false" />
+    <Property Name="categoryDescription" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="FlaggedItem">
+    <Key>
+      <PropertyRef Name="flaggedItemId" />
+    </Key>
+    <Property Name="flaggedItemId" Type="int" Nullable="false" />
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="flagTypeId" Type="int" Nullable="false" />
+    <Property Name="reason" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="FlagType">
+    <Key>
+      <PropertyRef Name="flagTypeId" />
+    </Key>
+    <Property Name="flagTypeId" Type="int" Nullable="false" />
+    <Property Name="flagType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="itemName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="itemDescription" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="itemLocationZip" Type="int" Nullable="false" />
+    <Property Name="itemPostTime" Type="datetime" Nullable="false" />
+    <Property Name="itemPrice" Type="float" Nullable="false" />
+    <Property Name="listingTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item_Category">
+    <Key>
+      <PropertyRef Name="itemId" />
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="categoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item_Keyword">
+    <Key>
+      <PropertyRef Name="itemId" />
+      <PropertyRef Name="keywordId" />
+    </Key>
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="keywordId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item_Tag">
+    <Key>
+      <PropertyRef Name="itemId" />
+      <PropertyRef Name="tagId" />
+    </Key>
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="tagId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemForSale">
+    <Key>
+      <PropertyRef Name="itemForSaleId" />
+    </Key>
+    <Property Name="itemForSaleId" Type="int" Nullable="false" />
+    <Property Name="sellerUserId" Type="int" Nullable="false" />
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="buyerUserId" Type="int" />
+    <Property Name="dateSold" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ItemImage">
+    <Key>
+      <PropertyRef Name="itemImageId" />
+    </Key>
+    <Property Name="itemImageId" Type="int" Nullable="false" />
+    <Property Name="itemImageShortDescription" Type="varchar" MaxLength="200" />
+    <Property Name="itemImageFilename" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="isPrimary" Type="bit" Nullable="false" />
+    <Property Name="itemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeyWord">
+    <Key>
+      <PropertyRef Name="keywordId" />
+    </Key>
+    <Property Name="keywordId" Type="int" Nullable="false" />
+    <Property Name="keyword" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ListingType">
+    <Key>
+      <PropertyRef Name="listingTypeId" />
+    </Key>
+    <Property Name="listingTypeId" Type="int" Nullable="false" />
+    <Property Name="listingType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PointAward">
+    <Key>
+      <PropertyRef Name="pointAwardId" />
+    </Key>
+    <Property Name="pointAwardId" Type="int" Nullable="false" />
+    <Property Name="pointQuantity" Type="int" Nullable="false" />
+    <Property Name="pointAwardRequirement" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="pointAwardName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="celebrationText" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SecurityQuestions">
+    <Key>
+      <PropertyRef Name="securityQuestionId" />
+    </Key>
+    <Property Name="securityQuestionId" Type="int" Nullable="false" />
+    <Property Name="question" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="answer" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="userId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="tagId" />
+    </Key>
+    <Property Name="tagId" Type="int" Nullable="false" />
+    <Property Name="tagName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="userId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="encryptedPassword" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="phone" Type="int" />
+    <Property Name="userTypeId" Type="int" Nullable="false" />
+    <Property Name="isEmailVerified" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_PointsAwarded">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="pointAwardId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="pointAwardId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="userTypeId" />
+    </Key>
+    <Property Name="userTypeId" Type="int" Nullable="false" />
+    <Property Name="userType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WatchCategory">
+    <Key>
+      <PropertyRef Name="watchCategoryId" />
+    </Key>
+    <Property Name="watchCategoryId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="categoryId" Type="int" />
+  </EntityType>
+  <EntityType Name="WatchItem">
+    <Key>
+      <PropertyRef Name="watchItemId" />
+    </Key>
+    <Property Name="watchItemId" Type="int" Nullable="false" />
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Category_Item_Category_FK1">
+    <End Role="Category" Type="ClassifiedsModel.Store.Category" Multiplicity="1" />
+    <End Role="Item_Category" Type="ClassifiedsModel.Store.Item_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="Item_Category">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Category_WatchCategory_FK1">
+    <End Role="Category" Type="ClassifiedsModel.Store.Category" Multiplicity="0..1" />
+    <End Role="WatchCategory" Type="ClassifiedsModel.Store.WatchCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="WatchCategory">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FlagType_FlaggedItem_FK1">
+    <End Role="FlagType" Type="ClassifiedsModel.Store.FlagType" Multiplicity="1" />
+    <End Role="FlaggedItem" Type="ClassifiedsModel.Store.FlaggedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlagType">
+        <PropertyRef Name="flagTypeId" />
+      </Principal>
+      <Dependent Role="FlaggedItem">
+        <PropertyRef Name="flagTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_FlaggedItem_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="FlaggedItem" Type="ClassifiedsModel.Store.FlaggedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="FlaggedItem">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_Item_Category_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="Item_Category" Type="ClassifiedsModel.Store.Item_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="Item_Category">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_Item_Keyword_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="Item_Keyword" Type="ClassifiedsModel.Store.Item_Keyword" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="Item_Keyword">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_Item_Tag_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="Item_Tag" Type="ClassifiedsModel.Store.Item_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="Item_Tag">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_ItemForSale_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="ItemForSale" Type="ClassifiedsModel.Store.ItemForSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="ItemForSale">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_ItemImage_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="ItemImage" Type="ClassifiedsModel.Store.ItemImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="ItemImage">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_WatchItem_FK1">
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="1" />
+    <End Role="WatchItem" Type="ClassifiedsModel.Store.WatchItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemId" />
+      </Principal>
+      <Dependent Role="WatchItem">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KeyWord_Item_Keyword_FK1">
+    <End Role="KeyWord" Type="ClassifiedsModel.Store.KeyWord" Multiplicity="1" />
+    <End Role="Item_Keyword" Type="ClassifiedsModel.Store.Item_Keyword" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KeyWord">
+        <PropertyRef Name="keywordId" />
+      </Principal>
+      <Dependent Role="Item_Keyword">
+        <PropertyRef Name="keywordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ListingType_Item_FK1">
+    <End Role="ListingType" Type="ClassifiedsModel.Store.ListingType" Multiplicity="1" />
+    <End Role="Item" Type="ClassifiedsModel.Store.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListingType">
+        <PropertyRef Name="listingTypeId" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="listingTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PointAward_User_PointsAwarded_FK1">
+    <End Role="PointAward" Type="ClassifiedsModel.Store.PointAward" Multiplicity="1" />
+    <End Role="User_PointsAwarded" Type="ClassifiedsModel.Store.User_PointsAwarded" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PointAward">
+        <PropertyRef Name="pointAwardId" />
+      </Principal>
+      <Dependent Role="User_PointsAwarded">
+        <PropertyRef Name="pointAwardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tag_Item_Tag_FK1">
+    <End Role="Tag" Type="ClassifiedsModel.Store.Tag" Multiplicity="1" />
+    <End Role="Item_Tag" Type="ClassifiedsModel.Store.Item_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="tagId" />
+      </Principal>
+      <Dependent Role="Item_Tag">
+        <PropertyRef Name="tagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_FlaggedItem_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="FlaggedItem" Type="ClassifiedsModel.Store.FlaggedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="FlaggedItem">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_ItemForSale_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="ItemForSale" Type="ClassifiedsModel.Store.ItemForSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="ItemForSale">
+        <PropertyRef Name="sellerUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_SecurityQuestions_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="SecurityQuestions" Type="ClassifiedsModel.Store.SecurityQuestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="SecurityQuestions">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_Tag_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="Tag" Type="ClassifiedsModel.Store.Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Tag">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_User_PointsAwarded_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="User_PointsAwarded" Type="ClassifiedsModel.Store.User_PointsAwarded" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="User_PointsAwarded">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_WatchCategory_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="WatchCategory" Type="ClassifiedsModel.Store.WatchCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="WatchCategory">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_WatchItem_FK1">
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="1" />
+    <End Role="WatchItem" Type="ClassifiedsModel.Store.WatchItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="WatchItem">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserType_User_FK1">
+    <End Role="UserType" Type="ClassifiedsModel.Store.UserType" Multiplicity="1" />
+    <End Role="User" Type="ClassifiedsModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserType">
+        <PropertyRef Name="userTypeId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="userTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

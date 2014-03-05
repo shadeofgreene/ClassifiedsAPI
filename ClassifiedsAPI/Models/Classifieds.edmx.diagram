@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="27ac2b0a7e3040ce973d74bc61d18fed" Name="Diagram1">
+        <EntityTypeShape EntityType="ClassifiedsModel.Category" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.FlaggedItem" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.FlagType" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.Item" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.ItemForSale" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.ItemImage" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.KeyWord" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.ListingType" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.PointAward" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.SecurityQuestion" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.Tag" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.User" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.UserType" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.WatchCategory" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassifiedsModel.WatchItem" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="ClassifiedsModel.Category_WatchCategory_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.FlagType_FlaggedItem_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_FlaggedItem_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_FlaggedItem_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_ItemForSale_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_ItemImage_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_WatchItem_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.ListingType_Item_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_ItemForSale_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_SecurityQuestions_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_Tag_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_WatchCategory_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_WatchItem_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.UserType_User_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_Keyword" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.Item_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassifiedsModel.User_PointsAwarded" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

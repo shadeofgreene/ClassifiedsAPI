@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClassifiedsModelStoreContainer" CdmEntityContainer="ClassifiedsEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="ClassifiedsModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
+          <ScalarProperty Name="categoryDescription" ColumnName="categoryDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlaggedItems">
+      <EntityTypeMapping TypeName="ClassifiedsModel.FlaggedItem">
+        <MappingFragment StoreEntitySet="FlaggedItem">
+          <ScalarProperty Name="flaggedItemId" ColumnName="flaggedItemId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="flagTypeId" ColumnName="flagTypeId" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlagTypes">
+      <EntityTypeMapping TypeName="ClassifiedsModel.FlagType">
+        <MappingFragment StoreEntitySet="FlagType">
+          <ScalarProperty Name="flagTypeId" ColumnName="flagTypeId" />
+          <ScalarProperty Name="flagType1" ColumnName="flagType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="ClassifiedsModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+          <ScalarProperty Name="itemDescription" ColumnName="itemDescription" />
+          <ScalarProperty Name="itemLocationZip" ColumnName="itemLocationZip" />
+          <ScalarProperty Name="itemPostTime" ColumnName="itemPostTime" />
+          <ScalarProperty Name="itemPrice" ColumnName="itemPrice" />
+          <ScalarProperty Name="listingTypeId" ColumnName="listingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemForSales">
+      <EntityTypeMapping TypeName="ClassifiedsModel.ItemForSale">
+        <MappingFragment StoreEntitySet="ItemForSale">
+          <ScalarProperty Name="itemForSaleId" ColumnName="itemForSaleId" />
+          <ScalarProperty Name="sellerUserId" ColumnName="sellerUserId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="buyerUserId" ColumnName="buyerUserId" />
+          <ScalarProperty Name="dateSold" ColumnName="dateSold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemImages">
+      <EntityTypeMapping TypeName="ClassifiedsModel.ItemImage">
+        <MappingFragment StoreEntitySet="ItemImage">
+          <ScalarProperty Name="itemImageId" ColumnName="itemImageId" />
+          <ScalarProperty Name="itemImageShortDescription" ColumnName="itemImageShortDescription" />
+          <ScalarProperty Name="itemImageFilename" ColumnName="itemImageFilename" />
+          <ScalarProperty Name="isPrimary" ColumnName="isPrimary" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeyWords">
+      <EntityTypeMapping TypeName="ClassifiedsModel.KeyWord">
+        <MappingFragment StoreEntitySet="KeyWord">
+          <ScalarProperty Name="keywordId" ColumnName="keywordId" />
+          <ScalarProperty Name="keyword1" ColumnName="keyword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListingTypes">
+      <EntityTypeMapping TypeName="ClassifiedsModel.ListingType">
+        <MappingFragment StoreEntitySet="ListingType">
+          <ScalarProperty Name="listingTypeId" ColumnName="listingTypeId" />
+          <ScalarProperty Name="listingType1" ColumnName="listingType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PointAwards">
+      <EntityTypeMapping TypeName="ClassifiedsModel.PointAward">
+        <MappingFragment StoreEntitySet="PointAward">
+          <ScalarProperty Name="pointAwardId" ColumnName="pointAwardId" />
+          <ScalarProperty Name="pointQuantity" ColumnName="pointQuantity" />
+          <ScalarProperty Name="pointAwardRequirement" ColumnName="pointAwardRequirement" />
+          <ScalarProperty Name="pointAwardName" ColumnName="pointAwardName" />
+          <ScalarProperty Name="celebrationText" ColumnName="celebrationText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityQuestions">
+      <EntityTypeMapping TypeName="ClassifiedsModel.SecurityQuestion">
+        <MappingFragment StoreEntitySet="SecurityQuestions">
+          <ScalarProperty Name="securityQuestionId" ColumnName="securityQuestionId" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="ClassifiedsModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="tagId" ColumnName="tagId" />
+          <ScalarProperty Name="tagName" ColumnName="tagName" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ClassifiedsModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="encryptedPassword" ColumnName="encryptedPassword" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="userTypeId" ColumnName="userTypeId" />
+          <ScalarProperty Name="isEmailVerified" ColumnName="isEmailVerified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="ClassifiedsModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
+          <ScalarProperty Name="userTypeId" ColumnName="userTypeId" />
+          <ScalarProperty Name="userType1" ColumnName="userType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WatchCategories">
+      <EntityTypeMapping TypeName="ClassifiedsModel.WatchCategory">
+        <MappingFragment StoreEntitySet="WatchCategory">
+          <ScalarProperty Name="watchCategoryId" ColumnName="watchCategoryId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WatchItems">
+      <EntityTypeMapping TypeName="ClassifiedsModel.WatchItem">
+        <MappingFragment StoreEntitySet="WatchItem">
+          <ScalarProperty Name="watchItemId" ColumnName="watchItemId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Item_Category" TypeName="ClassifiedsModel.Item_Category" StoreEntitySet="Item_Category">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+      </EndProperty>
+      <EndProperty Name="Item">
+        <ScalarProperty Name="itemId" ColumnName="itemId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Item_Keyword" TypeName="ClassifiedsModel.Item_Keyword" StoreEntitySet="Item_Keyword">
+      <EndProperty Name="Item">
+        <ScalarProperty Name="itemId" ColumnName="itemId" />
+      </EndProperty>
+      <EndProperty Name="KeyWord">
+        <ScalarProperty Name="keywordId" ColumnName="keywordId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Item_Tag" TypeName="ClassifiedsModel.Item_Tag" StoreEntitySet="Item_Tag">
+      <EndProperty Name="Item">
+        <ScalarProperty Name="itemId" ColumnName="itemId" />
+      </EndProperty>
+      <EndProperty Name="Tag">
+        <ScalarProperty Name="tagId" ColumnName="tagId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="User_PointsAwarded" TypeName="ClassifiedsModel.User_PointsAwarded" StoreEntitySet="User_PointsAwarded">
+      <EndProperty Name="PointAward">
+        <ScalarProperty Name="pointAwardId" ColumnName="pointAwardId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="userId" ColumnName="userId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
