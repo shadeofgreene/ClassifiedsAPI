@@ -14,9 +14,9 @@ namespace ClassifiedsAPI.Repositories
 		#endregion
 
 		#region Constructors
-		public ItemRepository()
+		public ItemRepository(ClassifiedsEntities dataContext)
 		{
-			_dataContext = new ClassifiedsEntities();
+			_dataContext = dataContext;
 		}
 		#endregion
 

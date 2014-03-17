@@ -15,9 +15,9 @@ namespace ClassifiedsAPI.Controllers
 		#endregion
 		
 		#region Constructors
-		public ItemController()
+		public ItemController(ItemRepository itemRepository)
 		{
-			_itemRepository = new ItemRepository();
+			_itemRepository = itemRepository;
 		}
 		#endregion
 
